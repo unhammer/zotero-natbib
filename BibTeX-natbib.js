@@ -1051,7 +1051,9 @@ var mappingTable = {
     "\u1EF4":"\\d{Y}", // LATIN CAPITAL LETTER Y WITH DOT BELOW
     "\u1EF5":"\\d{y}", // LATIN SMALL LETTER Y WITH DOT BELOW
     "\u1EF8":"\\~{Y}", // LATIN CAPITAL LETTER Y WITH TILDE
-    "\u1EF9":"\\~{y}" // LATIN SMALL LETTER Y WITH TILDE
+    "\u1EF9":"\\~{y}", // LATIN SMALL LETTER Y WITH TILDE
+    "\u00F8":"{\\o}",  // LATIN SMALL LETTER O WITH STROKE
+    "\u00D8":"{\\O}"   // LATIN CAPITAL LETTER O WITH STROKE
 };
 
 /* unfortunately the mapping isn't reversible - hence this second table - sigh! */
@@ -1522,7 +1524,9 @@ var reversemappingTable = {
     "\\d{Y}"                          : "\u1EF4", // LATIN CAPITAL LETTER Y WITH DOT BELOW
     "\\d{y}"                          : "\u1EF5", // LATIN SMALL LETTER Y WITH DOT BELOW
     "\\~{Y}"                          : "\u1EF8", // LATIN CAPITAL LETTER Y WITH TILDE
-    "\\~{y}"                          : "\u1EF9" // LATIN SMALL LETTER Y WITH TILDE
+    "\\~{y}"                          : "\u1EF9", // LATIN SMALL LETTER Y WITH TILDE
+    "{\\o}"                           : "\u00F8", // LATIN SMALL LETTER O WITH STROKE
+    "{\\O}"                           : "\u00D8"  // LATIN CAPITAL LETTER O WITH STROKE
 };
 
 var alwaysMap = {
