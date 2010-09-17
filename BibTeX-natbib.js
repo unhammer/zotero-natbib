@@ -1977,7 +1977,12 @@ function doExport() {
 		
 		for(var field in fieldMap) {
 			if(item[fieldMap[field]]) {
-				writeField(field, item[fieldMap[field]]);
+				if(field=="title") {
+					writeField(field, "{" + item[fieldMap[field]] + "}");
+				}
+				else {
+					writeField(field, item[fieldMap[field]]);
+				}
 			}
 		}
 
@@ -1987,9 +1992,9 @@ function doExport() {
 
 		if(item.publicationTitle) {
 			if(item.itemType == "bookSection" || item.itemType == "conferencePaper") {
-				writeField("booktitle", item.publicationTitle);
+				writeField("booktitle", "{" + item.publicationTitle + "}");
 			} else {
-				writeField("journal", item.publicationTitle);
+				writeField("journal", "{" + item.publicationTitle + "}");
 			}
 		}
 		
@@ -2068,7 +2073,27 @@ function doExport() {
 		//}
 		
 		if(item.itemType == "webpage") {
-			writeField("howpublished", item.url);
+		    // writeField("howpublished", item.url);
+		    // var date = Zotero.Utilities.strToDate(item.accessDate );
+		    // writeField("howpublished", item.url + " [Last accessed on " + (date.month+1) + "-" + date.day + ", " + date.year + " ]" );
+		    // Using lastchecked field instead, natbib-style:
+		    if(item.accessDate) {
+			var date = Zotero.Utilities.strToDate(item.accessDate);
+			var string = date.year;
+			if(date.month != undefined) {
+			    // deal with javascript months
+			    string += "-";
+			    date.month++;
+			    if(date.month < 10) string += "0";
+			    string += date.month
+			}
+			if(date.day != undefined) {
+			    string += "-";
+ 			    if(date.day < 10) string += "0";
+			    string += date.day;
+			}
+			writeField("lastchecked", string);
+		    }
 		}
 		if (item.notes) {
 			for each (var note in item.notes) {
