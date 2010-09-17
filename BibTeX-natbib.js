@@ -1,14 +1,14 @@
-{
-	"translatorID":"9cb70025-a888-4a29-a210-93ec52da40d4",
+{                       
+	"translatorID":"4346148d-3c49-7bd3-ca11-d9b0d8bde974",
 	"translatorType":3,
-	"label":"BibTeX",
-	"creator":"Simon Kornblith and Richard Karnesky",
+	"label":"BibTeX (natbib)",
+	"creator":"Simon Kornblith, Richard Karnesky, Kevin Brubeck Unhammer",
 	"target":"bib",
 	"minVersion":"1.0.0b4.r1",
 	"maxVersion":"",
 	"priority":200,
-	"inRepository":true,
-	"lastUpdated":"2010-06-18 08:32:05"
+	"inRepository":false,
+	"lastUpdated":"2010-09-17 16:32:05"
 }
 
 Zotero.configure("dataMode", "block");
