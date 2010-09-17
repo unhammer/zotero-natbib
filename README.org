@@ -1,6 +1,6 @@
 This is a slight change to the standard Zotero BibTeX exporter in
 order to work better with natbib. I am using it with these patched
-versions of Writer2LaTeX and LyZ.
+versions of [[http://github.com/unhammer/writer2latex][Writer2LaTeX]] and [[http://github.com/unhammer/lyz][LyZ]].
 
 To use it:
 
