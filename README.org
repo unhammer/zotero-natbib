@@ -1,6 +1,6 @@
 This is a slight change to the standard Zotero BibTeX exporter in
-order to work better with natbib. I am using it with these patched
-versions of [[http://github.com/unhammer/writer2latex][Writer2LaTeX]] and [[http://github.com/unhammer/lyz][LyZ]].
+order to work better with natbib, and fix the letter "ø"... I am using
+it with these patched versions of [[http://github.com/unhammer/writer2latex][Writer2LaTeX]] and [[http://github.com/unhammer/lyz][LyZ]].
 
 To use it:
 
@@ -10,5 +10,6 @@ To use it:
   also choose to store your Zotero folder somewhere else, in the
   Zotero "advanced" settings)
 - Restart Firefox. When you got to export, you’ll see it offered as a
-  possibility.
+  possibility. (Also, if you use the above LyZ-version, you can select
+  =BibTeX (natbib)= from LyZ->Settings.)
 
